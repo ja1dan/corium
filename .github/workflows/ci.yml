@@ -38,7 +38,7 @@ jobs:
           ${{ env.build_cmd }} Corium
           
           mkdir -p ${{ github.workspace }}/product
-          cp -R ${{ github.workspace }}/build/Release/libellekit.dylib ${{ github.workspace }}/product/corium
+          cp -R ${{ github.workspace }}/DerivedData/Build/Products/Debug/Corium ${{ github.workspace }}/product/corium
 
       - name: Upload executable to artifacts
         uses: actions/upload-artifact@v3
