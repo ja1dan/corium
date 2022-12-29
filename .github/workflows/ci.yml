@@ -1,0 +1,47 @@
+name: CI
+
+env:
+  build_cmd: xcodebuild CODE_SIGNING_ALLOWED="NO" CODE_SIGNING_REQUIRED="NO" CODE_SIGN_IDENTITY="" -scheme
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '**/*.md'
+      - '.gitignore'
+      
+  pull_request:
+    branches:
+      - main
+    paths-ignore:
+      - '**/*.md'
+      - '.gitignore'
+      
+  workflow_dispatch:
+  
+jobs:
+  build:
+    name: Build
+    runs-on: macos-12
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        
+      - name: Select Xcode version (14.1)
+        run: |
+          sudo xcode-select --switch /Applications/Xcode_14.1.app
+      
+      - name: Build executable
+        run: |
+          ${{ env.build_cmd }} Corium
+          
+          mkdir -p ${{ github.workspace }}/product
+          cp -R ${{ github.workspace }}/build/Release/libellekit.dylib ${{ github.workspace }}/product/corium
+
+      - name: Upload executable to artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: corium
+          path: ${{ github.workspace }}/product/corium

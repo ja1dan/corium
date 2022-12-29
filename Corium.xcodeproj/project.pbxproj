@@ -1,0 +1,392 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B26096732957789C0018B701 /* bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26096722957789C0018B701 /* bundle.swift */; };
+		B2785871295D0D1B00724616 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = B2785870295D0D1B00724616 /* ArgumentParser */; };
+		B2785873295D12D100724616 /* corium.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2785872295D12D100724616 /* corium.swift */; };
+		B2D69EFB2957F2C10097ECAC /* icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D69EFA2957F2C10097ECAC /* icons.swift */; };
+		B2D69EFD2957FC530097ECAC /* uicache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D69EFC2957FC530097ECAC /* uicache.swift */; };
+		B2E340A52958174500E479B0 /* AssetCatalogWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = B2E340A42958174500E479B0 /* AssetCatalogWrapper */; };
+		B2E340A729589B3A00E479B0 /* log.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E340A629589B3A00E479B0 /* log.swift */; };
+		B2E340AA29589CC300E479B0 /* Rainbow in Frameworks */ = {isa = PBXBuildFile; productRef = B2E340A929589CC300E479B0 /* Rainbow */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B260966329576B3B0018B701 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B260966529576B3B0018B701 /* Corium */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Corium; sourceTree = BUILT_PRODUCTS_DIR; };
+		B26096722957789C0018B701 /* bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bundle.swift; sourceTree = "<group>"; };
+		B2785872295D12D100724616 /* corium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = corium.swift; sourceTree = "<group>"; };
+		B2D69EFA2957F2C10097ECAC /* icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = icons.swift; sourceTree = "<group>"; };
+		B2D69EFC2957FC530097ECAC /* uicache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uicache.swift; sourceTree = "<group>"; };
+		B2E340A1295816D300E479B0 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		B2E340A629589B3A00E479B0 /* log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = log.swift; sourceTree = "<group>"; };
+		CE3C49A1295783C500CD00CD /* LaunchServices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LaunchServices.h; sourceTree = "<group>"; };
+		CE3C49A2295783E700CD00CD /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B260966229576B3B0018B701 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2785871295D0D1B00724616 /* ArgumentParser in Frameworks */,
+				B2E340A52958174500E479B0 /* AssetCatalogWrapper in Frameworks */,
+				B2E340AA29589CC300E479B0 /* Rainbow in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B260965C29576B3B0018B701 = {
+			isa = PBXGroup;
+			children = (
+				B260966729576B3B0018B701 /* Corium */,
+				B260966629576B3B0018B701 /* Products */,
+				B2E340A0295816D300E479B0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B260966629576B3B0018B701 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B260966529576B3B0018B701 /* Corium */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B260966729576B3B0018B701 /* Corium */ = {
+			isa = PBXGroup;
+			children = (
+				B260966F29576B540018B701 /* Logic */,
+				B2785872295D12D100724616 /* corium.swift */,
+			);
+			path = Corium;
+			sourceTree = "<group>";
+		};
+		B260966F29576B540018B701 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				B26096722957789C0018B701 /* bundle.swift */,
+				CE3C49A1295783C500CD00CD /* LaunchServices.h */,
+				CE3C49A2295783E700CD00CD /* module.modulemap */,
+				B2D69EFA2957F2C10097ECAC /* icons.swift */,
+				B2D69EFC2957FC530097ECAC /* uicache.swift */,
+				B2E340A629589B3A00E479B0 /* log.swift */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		B2E340A0295816D300E479B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2E340A1295816D300E479B0 /* CoreFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B260966429576B3B0018B701 /* Corium */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B260966C29576B3B0018B701 /* Build configuration list for PBXNativeTarget "Corium" */;
+			buildPhases = (
+				B260966129576B3B0018B701 /* Sources */,
+				B260966229576B3B0018B701 /* Frameworks */,
+				B260966329576B3B0018B701 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Corium;
+			packageProductDependencies = (
+				B2E340A42958174500E479B0 /* AssetCatalogWrapper */,
+				B2E340A929589CC300E479B0 /* Rainbow */,
+				B2785870295D0D1B00724616 /* ArgumentParser */,
+			);
+			productName = Corium;
+			productReference = B260966529576B3B0018B701 /* Corium */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B260965D29576B3B0018B701 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					B260966429576B3B0018B701 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = B260966029576B3B0018B701 /* Build configuration list for PBXProject "Corium" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B260965C29576B3B0018B701;
+			packageReferences = (
+				B2E340A32958174500E479B0 /* XCRemoteSwiftPackageReference "SantanderWrappers" */,
+				B2E340A829589CC300E479B0 /* XCRemoteSwiftPackageReference "Rainbow" */,
+				B278586F295D0D1B00724616 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+			);
+			productRefGroup = B260966629576B3B0018B701 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B260966429576B3B0018B701 /* Corium */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B260966129576B3B0018B701 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2785873295D12D100724616 /* corium.swift in Sources */,
+				B2E340A729589B3A00E479B0 /* log.swift in Sources */,
+				B26096732957789C0018B701 /* bundle.swift in Sources */,
+				B2D69EFB2957F2C10097ECAC /* icons.swift in Sources */,
+				B2D69EFD2957FC530097ECAC /* uicache.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B260966A29576B3B0018B701 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B260966B29576B3B0018B701 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		B260966D29576B3B0018B701 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Corium/Logic";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B260966E29576B3B0018B701 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4898ATD9KU;
+				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Corium/Logic";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B260966029576B3B0018B701 /* Build configuration list for PBXProject "Corium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B260966A29576B3B0018B701 /* Debug */,
+				B260966B29576B3B0018B701 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B260966C29576B3B0018B701 /* Build configuration list for PBXNativeTarget "Corium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B260966D29576B3B0018B701 /* Debug */,
+				B260966E29576B3B0018B701 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B278586F295D0D1B00724616 /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		B2E340A32958174500E479B0 /* XCRemoteSwiftPackageReference "SantanderWrappers" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SerenaKit/SantanderWrappers";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		B2E340A829589CC300E479B0 /* XCRemoteSwiftPackageReference "Rainbow" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Rainbow";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B2785870295D0D1B00724616 /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B278586F295D0D1B00724616 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
+		};
+		B2E340A42958174500E479B0 /* AssetCatalogWrapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B2E340A32958174500E479B0 /* XCRemoteSwiftPackageReference "SantanderWrappers" */;
+			productName = AssetCatalogWrapper;
+		};
+		B2E340A929589CC300E479B0 /* Rainbow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B2E340A829589CC300E479B0 /* XCRemoteSwiftPackageReference "Rainbow" */;
+			productName = Rainbow;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = B260965D29576B3B0018B701 /* Project object */;
+}
