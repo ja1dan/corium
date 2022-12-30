@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "rainbow",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/onevcat/Rainbow",
+      "state" : {
+        "revision" : "e0dada9cd44e3fa7ec3b867e49a8ddbf543e3df3",
+        "version" : "4.0.1"
+      }
+    },
+    {
+      "identity" : "santanderwrappers",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SerenaKit/SantanderWrappers",
+      "state" : {
+        "branch" : "main",
+        "revision" : "78c19b2eeba612b0fb7b13df7ab304062ee22622"
+      }
+    },
+    {
+      "identity" : "swift-argument-parser",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-argument-parser",
+      "state" : {
+        "revision" : "fddd1c00396eed152c45a46bea9f47b98e59301d",
+        "version" : "1.2.0"
+      }
+    }
+  ],
+  "version" : 2
+}
