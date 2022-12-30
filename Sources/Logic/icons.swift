@@ -47,14 +47,14 @@ struct Icons {
         try! FileManager.default.moveItem(atPath: "\(carPath.path).bak", toPath: carPath.path)
     }
     
-    func changeIcon(carPath: URL, imagePath: String) throws {
+    func changeIcon(carPath: URL, imagePath: String, verbose: Bool) throws {
         // get assets.car
         let renditions = try? AssetCatalogWrapper.shared.renditions(forCarArchive: carPath)
         guard (renditions != nil) else {
             error("Failed to wrap \(carPath.path)")
             throw ExitCode.failure
         }
-        debug("Got Assets.car at \(carPath.path)")
+        debug("Got Assets.car at \(carPath.path)", verbose: verbose)
         // convert to cgimage
         let cgImage = try! convertToCGImage(imagePath: imagePath)
         // make copy of assets

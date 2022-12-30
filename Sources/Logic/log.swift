@@ -12,8 +12,8 @@ func info(_ items: Any) {
     print("[".lightBlack.bold + "*".green + "]".lightBlack.bold + " \(items)")
 }
 
-func debug(_ items: Any) {
-    print("[".lightBlack.bold + "#".yellow + "]".lightBlack.bold + " \(items)")
+func debug(_ items: Any, verbose: Bool) {
+    if (verbose) { print("[".lightBlack.bold + "#".yellow + "]".lightBlack.bold + " \(items)") }
 }
 
 func error(_ items: Any) {

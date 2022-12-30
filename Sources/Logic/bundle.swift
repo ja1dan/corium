@@ -36,14 +36,15 @@ struct BundleInfo {
     }
     
     func readBundle(path: String) -> AppInfo? {
+        // ensure path exists
         guard FileManager.default.fileExists(atPath: path) else {
             return nil
         }
+        // return first bundle we find whose path matches the patch we were given
         return bundles.first { $0.path == path }
     }
     
     func readBundle(id: String) -> [AppInfo]? {
-        
         // filter and find apps that match the ID
         let filtered = bundles.filter { bundle in
             return bundle.identifier == id

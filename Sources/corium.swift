@@ -26,6 +26,9 @@ struct Corium: ParsableCommand {
 }
 
 struct ThemeOptions: ParsableArguments {
+    @Flag(name: [.customLong("verbose"), .customShort("v")], help: "Include extra information in the output.")
+    var verbose = false
+    
     @Argument(help: "Path of the app to theme.")
     var app: String = ""
     
@@ -34,7 +37,10 @@ struct ThemeOptions: ParsableArguments {
 }
 
 struct ResetOptions: ParsableArguments {
-    @Argument(help: "Path of the app.")
+    @Flag(name: [.customLong("verbose"), .customShort("v")], help: "Include extra information in the output.")
+    var verbose = false
+    
+    @Argument(help: "Path of the app with the icon you'd like to reset.")
     var app: String = ""
 }
 
@@ -56,7 +62,7 @@ extension Corium {
             }
             // check if root
             if (getuid() != 0) {
-                error("Rerun as root!")
+                error("Modifying system files and clearing the system icon cache requires root permissions. Please rerun the executable as root.")
                 throw ExitCode.failure
             }
             // get bundle info
@@ -68,7 +74,7 @@ extension Corium {
                 throw ExitCode.failure
             }
             // change icon
-            try Icons().changeIcon(carPath: app!.carPath, imagePath: options.imagePath)
+            try Icons().changeIcon(carPath: app!.carPath, imagePath: options.imagePath, verbose: options.verbose)
             // run uicache
             info("Refreshing icon cache...")
             uicache()
@@ -78,7 +84,7 @@ extension Corium {
     struct Reset: ParsableCommand {
         static var configuration = CommandConfiguration(abstract: "Reset the icon of an app.")
 
-        @OptionGroup var options: ThemeOptions
+        @OptionGroup var options: ResetOptions
 
         func run() throws {
             // check that correct options were passed
@@ -88,7 +94,7 @@ extension Corium {
             }
             // check if root
             if (getuid() != 0) {
-                error("Rerun as root!")
+                error("Modifying system files and clearing the system icon cache requires root permissions. Please rerun the executable as root.")
                 throw ExitCode.failure
             }
             // get bundle info
@@ -99,7 +105,7 @@ extension Corium {
                 error("Could not find app with path \(options.app).")
                 throw ExitCode.failure
             }
-            // change icon
+            // restore icon from .car.bak
             try Icons().restoreBackup(carPath: app!.carPath)
             // run uicache
             info("Refreshing icon cache...")
