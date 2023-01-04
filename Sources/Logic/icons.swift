@@ -39,7 +39,7 @@ struct Icons {
         // ensure that backup exists
         guard FileManager.default.fileExists(atPath: "\(carPath.path).bak") else {
             info("App has no Assets.car to restore.")
-            throw ExitCode.success
+            throw ExitCode.failure
         }
         // remove modified .car
         try! FileManager.default.removeItem(atPath: carPath.path)
